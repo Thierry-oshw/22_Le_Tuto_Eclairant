@@ -141,67 +141,10 @@ F 3 "~" H 750 6550 50  0001 C CNN
 	1    750  6550
 	1    0    0    -1  
 $EndComp
-$Comp
-L Mechanical:MountingHole_Pad H?
-U 1 1 62741B0E
-P 750 7300
-AR Path="/625B6984/62741B0E" Ref="H?"  Part="1" 
-AR Path="/62741B0E" Ref="H2"  Part="1" 
-F 0 "H2" H 850 7349 50  0000 L CNN
-F 1 "MountingHole_Pad" H 850 7258 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 750 7300 50  0001 C CNN
-F 3 "~" H 750 7300 50  0001 C CNN
-	1    750  7300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad H?
-U 1 1 62741B14
-P 1750 6550
-AR Path="/625B6984/62741B14" Ref="H?"  Part="1" 
-AR Path="/62741B14" Ref="H3"  Part="1" 
-F 0 "H3" H 1850 6599 50  0000 L CNN
-F 1 "MountingHole_Pad" H 1850 6508 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 1750 6550 50  0001 C CNN
-F 3 "~" H 1750 6550 50  0001 C CNN
-	1    1750 6550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad H?
-U 1 1 62741B1A
-P 1750 7300
-AR Path="/625B6984/62741B1A" Ref="H?"  Part="1" 
-AR Path="/62741B1A" Ref="H4"  Part="1" 
-F 0 "H4" H 1850 7349 50  0000 L CNN
-F 1 "MountingHole_Pad" H 1850 7258 50  0000 L CNN
-F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 1750 7300 50  0001 C CNN
-F 3 "~" H 1750 7300 50  0001 C CNN
-	1    1750 7300
-	1    0    0    -1  
-$EndComp
 Text GLabel 2000 6750 2    50   Input ~ 0
 REF_5V
 Wire Wire Line
-	2000 6750 1750 6750
-Wire Wire Line
-	1750 6750 1750 6650
-Wire Wire Line
-	1750 6750 750  6750
-Wire Wire Line
 	750  6750 750  6650
-Connection ~ 1750 6750
-Wire Wire Line
-	1750 7400 1750 7500
-Wire Wire Line
-	1750 7500 750  7500
-Wire Wire Line
-	750  7500 750  7400
-Text GLabel 2000 7500 2    50   Input ~ 0
-REF_5V
-Wire Wire Line
-	2000 7500 1750 7500
-Connection ~ 1750 7500
 Text GLabel 3150 4000 0    50   Input ~ 0
 S0
 Wire Wire Line
@@ -306,4 +249,6 @@ F 3 "C202382" H 3475 2575 50  0001 C CNN
 	1    3475 2575
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	750  6750 2000 6750
 $EndSCHEMATC
