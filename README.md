@@ -32,9 +32,9 @@ U(diode) vaut approximativement 1,2V. Si i vaut 5mA, il faut les couples suivant
 |u|i|
 |-|:-|
 |1,5V (pile AAA cylindrique par exemple)|68 Ohms|
-|-|:-|
+|-+-|
 |3,3V|470 Ohms|
-|-|:-|
+|-+-|
 |5V|820 Ohms|
 
 Les résistances devront avoir un boîtier permettant de dissiper au moins 50mW.
