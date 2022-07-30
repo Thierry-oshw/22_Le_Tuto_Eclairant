@@ -6,6 +6,8 @@
 #define Pot_1 A1
 #define Pot_2 A2
 
+#define Bouton 2
+
 int index_Pot = 0;
 int mes_Pot_0 [8];
 int mes_Pot_1 [8];
@@ -14,6 +16,8 @@ int mes_Pot_2 [8];
 int som_Pot_0 = 0;
 int som_Pot_1 = 0;
 int som_Pot_2 = 0;
+
+int Brillance = 50;
 
 #define NUM_LEDS 64     
 #define DATA_PIN 10
@@ -33,6 +37,7 @@ void setup() {
   pinMode(Pot_0, INPUT);
   pinMode(Pot_1, INPUT);
   pinMode(Pot_2, INPUT);
+  pinMode(Bouton, INPUT_PULLUP);
 
   FastLED.addLeds<WS2812B, DATA_PIN, GRB>(Leds, NUM_LEDS);
   FastLED.delay(50);
@@ -61,6 +66,11 @@ void loop() {
     index_Pot++;
     if (index_Pot > 7) {index_Pot = 0;}
 
+    if (digitalRead(Bouton) == 0) {
+          Brillance++;
+          if (Brillance > 100) {Brillance = 0;}      
+       }      
+
     CRGB couleur = CRGB( (som_Pot_0/32), (som_Pot_1/32), (som_Pot_2/32));
   
     for(int i = 0 ; i<NUM_LEDS; i++)
@@ -81,6 +91,7 @@ void loop() {
  
     //FastLED.delay(500);
     FastLED.delay(50);
-    //FastLED.setBrightness(som_Pot_3/64);
+    
+    FastLED.setBrightness(Brillance);
  
 }
