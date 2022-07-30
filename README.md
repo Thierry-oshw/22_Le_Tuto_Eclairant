@@ -51,3 +51,31 @@ Les LEDS sont à la queue-leu-leu (daisy chain en anglais).
 Une méthode pour les piloter est alors d’utiliser par exemple une carte Arduino Nano avec 3 potentiomètres par exemple :
 
 ![schema arduino nano](/images/schema_3.png "Schema arduino nano")
+
+Et on utilise le bouton pour régler l'intensité lumineuse.
+
+Les potentiomètres sont dédiées chacun à l'intensité d'une couleur.
+
+La brillance de l'ensemble est réglée par un bouton. Un appui long fait augmenter la valeur jusqu'à un max et retombe à zéro.
+
+Le code arduino est dans le répertoire: Le_Tuto_Eclairant_SW de ce projet.
+J'ai utilisé Visual Studio Code avec platform IO. Vous pouvez utilisez à la place l'IDE arduino, vous avez juste à recopier le fichier main dans:
+\Le_Tuto_Eclairant_SW\Le_Tuto_Eclairant_SW\src\main.cpp
+et le renommer en .ino ou le coller dans un projet Arduino.
+
+Le code est très simple. (Je n'ai même pas mis de debounce sur le bouton..)
+
+Le projet kicad est dans le répertoire: Le_Tuto_Eclairant_HW.
+J'utilise encore Kicad version 5, j'ai pas encore migré.
+
+Les fichiers pour la fabrication du PCB sont dans le répertoire: Le_Tuto_Eclairant_HW\dossier_fabrication
+Ils sont prêts pour être fabriqué chez JLCPCB.COM. (C'est un exemple).
+
+Quelques photos du résultat:
+
+![Photo](/images/bleu.jpg "bleu")
+![Photo](/images/blanc.jpg "blanc")
+![Photo](/images/rouge.jpg "rouge")
+![Photo](/images/vert.jpg "vert")
+
+En espérant que cela puisse vous permettre de réaliser un diorama avec la lumière qui vous plait.
