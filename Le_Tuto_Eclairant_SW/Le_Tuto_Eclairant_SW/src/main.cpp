@@ -19,7 +19,7 @@ int som_Pot_2 = 0;
 
 int Brillance = 50;
 
-#define NUM_LEDS 64     
+#define NUM_LEDS 128     
 #define DATA_PIN 10
 CRGB Leds[NUM_LEDS];
 
